@@ -1,0 +1,17 @@
+zerops:
+  - setup: zabbix
+    build:
+      os: ubuntu
+      base:  ubuntu@22.04
+      deployFiles: [.]
+
+    run:
+      os: ubuntu
+      base:  ubuntu@22.04
+      
+
+      ports:
+        - port: 8080
+          httpSupport: true
+  
+      start: sleep 999999999
