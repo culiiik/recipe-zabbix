@@ -1,6 +1,8 @@
 zerops:
   - setup: zabbix
-    
+    build:
+      deployFiles: [.]
+
     run:
       os: ubuntu
       base:  ubuntu@22.04
