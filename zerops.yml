@@ -14,7 +14,8 @@ zerops:
         - sudo apt-get -y install postgresql-client
 
       initCommands:
-        - ./migrate.sh
+        - sudo chmod +x /var/www/migrate.sh
+        - sudo /var/www/migrate.sh
         - sudo cp /var/www/zabbix_server.conf /etc/zabbix/
         - sudo cp /var/www/nginx.conf /etc/zabbix/
         - sudo systemctl daemon-reload
