@@ -1,9 +1,0 @@
-services:
-  - hostname: zabbix
-    type: ubuntu@22.04
-
-    enableSubdomainAccess: true
-
-    buildFromGit: "https://github.com/zeropsio/recipe-zabbix"
-
-    zeropsSetup: zabbix
