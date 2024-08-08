@@ -12,11 +12,11 @@ zerops:
         - sudo apt-get -y update
         - sudo apt-get -y install zabbix-server-pgsql zabbix-frontend-php php8.1-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent
         - sudo apt-get -y install postgresql-client
-        - sudo cp /var/www/zabbix_server.conf /etc/zabbix/
-        - sudo cp /var/www/nginx.conf /etc/zabbix/
 
       initCommands:
         - ./migrate.sh
+        - sudo cp /var/www/zabbix_server.conf /etc/zabbix/
+        - sudo cp /var/www/nginx.conf /etc/zabbix/
         - sudo systemctl daemon-reload
         - sudo systemctl restart zabbix-server zabbix-agent nginx php8.1-fpm
         - sudo systemctl enable zabbix-server zabbix-agent nginx php8.1-fpm
