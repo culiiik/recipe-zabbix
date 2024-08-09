@@ -16,11 +16,11 @@ zerops:
       initCommands:
         - chmod +x /var/www/migrate.sh
         - /var/www/migrate.sh
-        - sudo cp /var/www/zabbix_server.conf /etc/zabbix/
-        - sudo cp /var/www/nginx.conf /etc/zabbix/
-        - sudo systemctl daemon-reload
-        - sudo systemctl restart zabbix-server zabbix-agent nginx php8.1-fpm
-        - sudo systemctl enable zabbix-server zabbix-agent nginx php8.1-fpm
+        - cp /var/www/zabbix_server.conf /etc/zabbix/
+        - cp /var/www/nginx.conf /etc/zabbix/
+        - systemctl daemon-reload
+        - systemctl restart zabbix-server zabbix-agent nginx php8.1-fpm
+        - systemctl enable zabbix-server zabbix-agent nginx php8.1-fpm
         
 
       ports:
