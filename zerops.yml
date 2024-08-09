@@ -15,7 +15,7 @@ zerops:
 
       initCommands:
         - sudo chmod +x /var/www/migrate.sh
-        - sudo /var/www/migrate.sh
+        - /var/www/migrate.sh
         - sudo cp /var/www/zabbix_server.conf /etc/zabbix/
         - sudo cp /var/www/nginx.conf /etc/zabbix/
         - sudo systemctl daemon-reload
