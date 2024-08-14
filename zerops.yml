@@ -16,9 +16,15 @@ zerops:
       initCommands:
         - sudo chmod +x /var/www/migrate.sh
         - /var/www/migrate.sh
-        - sudo cp /var/www/zabbix_server.conf /etc/zabbix/
+        #- sudo cp /var/www/zabbix_server.conf /etc/zabbix/
+        - sudo sed -i 's/DBHost=/'DBHost="${pgdb_hostname}"'/g' /etc/zabbix/zabbix_server.conf
+        - sudo sed -i 's/DBUser=/'DBUser="${pgdb_user}"'/g' /etc/zabbix/zabbix_server.conf
+        - sudo sed -i 's/DBPassword=/'DBPassword="${pgdb_password}"'/g' /etc/zabbix/zabbix_server.conf
         - sudo cp /var/www/nginx.conf /etc/zabbix/
         - sudo cp /var/www/zabbix.conf.php /etc/zabbix/web/
+        - sudo sed -i 's/pgdb_hostname/'"${pgdb_hostname}"'/g' /etc/zabbix/web/zabbix.conf.php
+        - sudo sed -i 's/pgdb_user/'"${pgdb_user}"'/g' /etc/zabbix/web/zabbix.conf.php
+        - sudo sed -i 's/pgdb_password/'"${pgdb_password}"'/g' /etc/zabbix/web/zabbix.conf.php
         - sudo systemctl daemon-reload
         - sudo systemctl restart zabbix-server zabbix-agent nginx php8.1-fpm
         - sudo systemctl enable zabbix-server zabbix-agent nginx php8.1-fpm
