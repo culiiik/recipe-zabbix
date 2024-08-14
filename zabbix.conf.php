@@ -2,11 +2,11 @@
 // Zabbix GUI configuration file.
 
 $DB['TYPE']			= 'POSTGRESQL';
-$DB['SERVER']		= '${pgdb_hostname}';
+$DB['SERVER']		= getenv('pgdb_hostname');
 $DB['PORT']			= '0';
 $DB['DATABASE']		= 'zabbix';
-$DB['USER']			= '${pgdb_user}';
-$DB['PASSWORD']		= '${pgdb_password}';
+$DB['USER']			= getenv('pgdb_user');
+$DB['PASSWORD']		= getenv('pgdb_password');
 
 // Schema name. Used for PostgreSQL.
 $DB['SCHEMA']			= '';
