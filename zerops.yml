@@ -20,10 +20,10 @@ zerops:
         - sudo cp /var/www/nginx.conf /etc/zabbix/
         - sudo systemctl daemon-reload
         - sudo systemctl restart zabbix-server zabbix-agent nginx php8.1-fpm
-        - sudo systemctl zabbix-server enable zabbix-agent nginx php8.1-fpm
+        - sudo systemctl enable zabbix-server zabbix-agent nginx php8.1-fpm
 
       ports:
         - port: 8080
           httpSupport: true
   
-      start: sleep 99
+      start: sleep 999
