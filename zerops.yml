@@ -26,4 +26,4 @@ zerops:
         - port: 8080
           httpSupport: true
   
-      start: /usr/sbin/zabbix_server -f
+      start: sudo /usr/sbin/zabbix_server -f
