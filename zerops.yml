@@ -19,7 +19,7 @@ zerops:
         - sudo cp /var/www/zabbix_server.conf /etc/zabbix/
         - sudo sed -i 's/pgdb_hostname/'"${pgdb_hostname}"'/g' /etc/zabbix/zabbix_server.conf
         - sudo sed -i 's/pgdb_user/'"${pgdb_user}"'/g' /etc/zabbix/zabbix_server.conf
-        - sudo sed -i 's/pgdb_password=/'"${pgdb_password}"'/g' /etc/zabbix/zabbix_server.conf
+        - sudo sed -i 's/pgdb_password/'"${pgdb_password}"'/g' /etc/zabbix/zabbix_server.conf
         - sudo cp /var/www/nginx.conf /etc/zabbix/
         - sudo cp /var/www/zabbix.conf.php /etc/zabbix/web/
         - sudo sed -i 's/pgdb_hostname/'"${pgdb_hostname}"'/g' /etc/zabbix/web/zabbix.conf.php
