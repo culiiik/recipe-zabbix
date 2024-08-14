@@ -18,6 +18,7 @@ zerops:
         - /var/www/migrate.sh
         - sudo cp /var/www/zabbix_server.conf /etc/zabbix/
         - sudo cp /var/www/nginx.conf /etc/zabbix/
+        - sudo cp /var/www/zabbix.conf.php /usr/share/zabbix/conf/
         - sudo systemctl daemon-reload
         - sudo systemctl restart zabbix-server zabbix-agent nginx php8.1-fpm
         - sudo systemctl enable zabbix-server zabbix-agent nginx php8.1-fpm
