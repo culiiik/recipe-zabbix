@@ -27,4 +27,4 @@ zerops:
         - port: 8080
           httpSupport: true
   
-      start: sleep 999
+      start: while true; do sleep 10000; done
