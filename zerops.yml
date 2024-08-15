@@ -29,7 +29,6 @@ zerops:
         - sudo systemctl restart zabbix-server zabbix-agent nginx php8.1-fpm
         - sudo systemctl enable zabbix-server zabbix-agent nginx php8.1-fpm
 
-
       ports:
         - port: 8080
           httpSupport: true

@@ -2,7 +2,7 @@ project:
   name: recipe-zabbix
 services:
   - hostname: pgdb
-    type: postgresql@12
+    type: postgresql@16
     mode: HA
     priority: 10
   
