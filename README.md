@@ -1,6 +1,6 @@
 # Zerops x Zabbix
 
-[Zabbix](https://www.zabbix.com/) is self-hosted monitoring system and visualizatio software.
+[Zabbix](https://www.zabbix.com/) is self-hosted monitoring and visualization software.
 
 ## Prerequisites
 
